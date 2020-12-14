@@ -13,11 +13,143 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="fonts/fontawesome5-overrides.min.css?h=db5fbbc34070d36ea9b98958ab6f065c">
+    <style rel="stylesheet">
+
+    /*
+    *  animation for dots
+    */
+   .dot-floating {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: white;
+  color: white;
+  animation: dotFloating 3s infinite cubic-bezier(0.15, 0.6, 0.9, 0.1);
+}
+
+.dot-floating::before, .dot-floating::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+
+.dot-floating::before {
+  left: -12px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: white;
+  color: white;
+  animation: dotFloatingBefore 3s infinite ease-in-out;
+}
+
+.dot-floating::after {
+  left: -24px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: white;
+  color: white;
+  animation: dotFloatingAfter 3s infinite cubic-bezier(0.4, 0, 1, 1);
+}
+
+@keyframes dotFloating {
+  0% {
+    left: calc(-50% - 5px);
+  }
+  75% {
+    left: calc(50% + 105px);
+  }
+  100% {
+    left: calc(50% + 105px);
+  }
+}
+
+@keyframes dotFloatingBefore {
+  0% {
+    left: -50px;
+  }
+  50% {
+    left: -12px;
+  }
+  75% {
+    left: -50px;
+  }
+  100% {
+    left: -50px;
+  }
+}
+
+@keyframes dotFloatingAfter {
+  0% {
+    left: -100px;
+  }
+  50% {
+    left: -24px;
+  }
+  75% {
+    left: -100px;
+  }
+  100% {
+    left: -100px;
+  }
+}
+/*
+*
+*  hovering on after 'be the part of our's is cliccked
+*
+*/
+
+
+
+.hvr-shutter-in-vertical {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-shutter-in-vertical:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 50%;
+  background: #818a04;
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-shutter-in-vertical:hover, .hvr-shutter-in-vertical:focus, .hvr-shutter-in-vertical:active {
+  color: white;
+}
+.hvr-shutter-in-vertical:hover:before, .hvr-shutter-in-vertical:focus:before, .hvr-shutter-in-vertical:active:before {
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+}
+</style>
 </head>
 
 <body id="page-top">
     <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark" id="mainNav">
-        <div class="container"><a class="navbar-brand" ><span style="background: -webkit-linear-gradient(#ffdd00, #fbb034);
+        <div class="container"><a href="#Home" class="navbar-brand" ><span style="background: -webkit-linear-gradient(#ffdd00, #fbb034);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
     font-size:3rem;
@@ -25,56 +157,118 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
     font-size:2rem;
-    " class="fas fa-paint-brush"></i></a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right" type="button" data-toogle="collapse" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+    " class="fas fa-paint-brush"></i></a>
+    <button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right" type="button" data-toogle="collapse" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="nav navbar-nav ml-auto text-uppercase">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">HOme</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">SERVIces</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">features</a></li>
-                    <li class="nav-item"></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Services</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Team</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact us</a></li>
                 </ul>
             </div><a class="js-scroll-trigger" href="#contact"></a>
         </div>
-    </nav><header class="masthead" style="background-image:url('img/banner.jpg?h=dd9ff3ad18cab3ee921efbcf79da8ca8'); max-width:100%; height:auto;">
+    </nav>
+  <header id="Home" class="masthead" style="background-image:url('img/banner.jpg?h=dd9ff3ad18cab3ee921efbcf79da8ca8'); max-width:100%; height:auto;">
     <div class="container">
         <div class="intro-text">
             <div class="intro-lead-in"><span >Welcome To Editing world!</span></div>
             <div class="intro-heading text-uppercase">
                 <div><br /><strong>Let&#39;s CELEBRATE BIRTHDAYS<br /><i class="fas fa-birthday-cake"></i></strong></div>
-            </div><a class="btn btn-warning btn-xl text-uppercase js-scroll-trigger" role="button"  href="#services">Tell me more</a>
+            </div><a class="btn btn-warning btn-xl text-uppercase js-scroll-trigger" role="button"  href="#about">Tell me more</a>
         </div>
     </div>
-</header><section id="services">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="text-uppercase section-heading">Services</h2>
-                <h3 class="text-muted section-subheading">Lorem ipsum dolor sit amet consectetur</h3>
-            </div>
-        </div>
-        <div class="row text-center">
-            <div class="col-md-4"><span class="fa-stack fa-4x"><i class="fa fa-circle fa-stack-2x text-primary"></i><i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i></span>
-                <h4 class="section-heading">E-Commerce</h4>
-                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-            </div>
-            <div class="col-md-4"><span class="fa-stack fa-4x"><i class="fa fa-circle fa-stack-2x text-primary"></i><i class="fa fa-laptop fa-stack-1x fa-inverse"></i></span>
-                <h4 class="section-heading">Responsive Design</h4>
-                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-            </div>
-            <div class="col-md-4"><span class="fa-stack fa-4x"><i class="fa fa-circle fa-stack-2x text-primary"></i><i class="fa fa-lock fa-stack-1x fa-inverse"></i></span>
-                <h4 class="section-heading">Web Security</h4>
-                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-            </div>
-        </div>
-    </div>
+</header>
+
+
+
+
+
+
+
+
+<section id="about">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12 text-center">
+              <h2 class="text-uppercase">Why us??</h2>
+              <h3 class="text-muted section-subheading">Why you sould use our services.</h3>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-lg-12">
+              <ul class="list-group timeline">
+                  <li class="list-group-item">
+                      <div class="timeline-image"><img class="rounded-circle img-fluid" src="img/about/about_free_1.png"></div>
+                      <div class="timeline-panel">
+                          <div class="timeline-heading">
+                              <h4 class="display-5">Free Service</h4>
+                              <h4 class="subheading"></h4>
+                          </div>
+                          <div class="timeline-body">
+                              <p class="text-muted">We provide almost everything for free!!</p>
+                          </div>
+                      </div>
+                  </li>
+                  <li class="list-group-item timeline-inverted">
+                      <div class="timeline-image"><img class="rounded-circle img-fluid" src="img/about/about_free_2.png"></div>
+                      <div class="timeline-panel">
+                          <div class="timeline-heading">
+                              <h4 class="display-5">Make Beautiful Templates</h4>
+                              <h4 class="subheading"><h4>
+                          </div>
+                          <div class="timeline-body">
+                              <p class="text-muted">Create your own templates or use our templates to make a birthday wish!!</p>
+                          </div>
+                      </div>
+                  </li>
+                  <li  class="list-group-item timeline-inverted ">
+                    <div class="timeline-image hvr-shutter-in-vertical" style="background-color: #2098D1;">
+                        <h4>Be Part<br>&nbsp;Of Our<br>&nbsp;Story!</h4>
+                    </div>
+                </li>
+                  <li class="list-group-item">
+                      <div class="timeline-image"><img class="rounded-circle img-fluid" src="img/about/about_free_music.png"></div>
+                      <div class="timeline-panel">
+                          <div class="timeline-heading">
+                              <h4>Add the music</h4>
+                              <h4 class="subheading"></h4>
+                          </div>
+                          <div class="timeline-body">
+                              <p class="text-muted">Add the favourate music to your templates for free</p>
+                          </div>
+                      </div>
+                  </li>
+                  <li class="list-group-item timeline-inverted">
+                      <div class="timeline-image"><img class="rounded-circle img-fluid" src="img/about/about_share.png"></div>
+                      <div class="timeline-panel">
+                          <div class="timeline-heading">
+                              <h4>Add video and share your feeling with  world</h4>
+                              <h4 class="subheading"></h4>
+                          </div>
+                          <div class="timeline-body">
+                              <p class="text-muted">Add some video and then share it to the world.Lets make your art our face!!!</p>
+                          </div>
+                      </div>
+                  </li>
+                  <li class="list-group-item timeline-inverted">
+                      <div style="background-color: rgb(97, 88, 6);" class="timeline-image">
+                          <h4>And<br>much<br>more<br><span class="dot-floating"></span></h4>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </div>
 </section>
-    <section id="portfolio" class="bg-light">
+
+<section id="portfolio" class="bg-light">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="text-uppercase section-heading">Portfolio</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="text-uppercase section-heading">Examples of templates</h2>
+                    <h3 class="section-subheading text-muted">Templates creted by our developers.</h3>
                 </div>
             </div>
             <div class="row">
@@ -108,7 +302,7 @@
                         <p class="text-muted">Identity</p>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 portfolio-item"><a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+               <div class="col-sm-6 col-md-4 portfolio-item"><a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
                         </div><img class="img-fluid" src="img/portfolio/4-thumbnail.jpg?h=62e85a384b97007129548e987c155861">
@@ -118,7 +312,7 @@
                         <p class="text-muted">Branding</p>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 portfolio-item"><a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
+                <!-- <div class="col-sm-6 col-md-4 portfolio-item"><a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
                         </div><img class="img-fluid img-fluid" src="img/portfolio/5-thumbnail.jpg?h=71496ae4d377a216a250e5349e5dab7c">
@@ -137,81 +331,14 @@
                         <h4>Window</h4>
                         <p class="text-muted">Photography</p>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
     </section>
-    <section id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="text-uppercase">About</h2>
-                    <h3 class="text-muted section-subheading">Lorem ipsum dolor sit amet consectetur.</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="list-group timeline">
-                        <li class="list-group-item">
-                            <div class="timeline-image"><img class="rounded-circle img-fluid" src="img/about/1.jpg?h=d6348b0ac62136468dbff141c95c313b"></div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>2009-2011</h4>
-                                    <h4 class="subheading">Our Humble Beginnings</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item timeline-inverted">
-                            <div class="timeline-image"><img class="rounded-circle img-fluid" src="img/about/2.jpg?h=a0bc1f1302cca7e34fe4a8a6ede823be"></div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>March 2011</h4>
-                                    <h4 class="subheading">An Agency is Born</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item">
-                            <div class="timeline-image"><img class="rounded-circle img-fluid" src="img/about/3.jpg?h=90e7913e72276cee000a30cb05a62998"></div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>December 2012</h4>
-                                    <h4 class="subheading">Transition to Full Service</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item timeline-inverted">
-                            <div class="timeline-image"><img class="rounded-circle img-fluid" src="img/about/4.jpg?h=dd75735e722d131b77b4cf11c203f0fa"></div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>July 2014</h4>
-                                    <h4 class="subheading">Phase Two Expansion</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item timeline-inverted">
-                            <div class="timeline-image">
-                                <h4>Be Part<br>&nbsp;Of Our<br>&nbsp;Story!</h4>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+    
     <section id="team" class="bg-light">
         <div class="container">
+          <h1 style="text-align: center;padding-bottom:12%;">Let's cheer for our team!!</h1>
             <div class="row">
                 <div class="col-sm-4">
                     <div class="team-member"><img class="rounded-circle mx-auto" src=".img/team/1.jpg?h=c434e0c7fcafcc377eb28d401bc929c5">
@@ -246,16 +373,6 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    <section class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 col-md-3"><a href="#"><img class="img-fluid d-block mx-auto" src="img/clients/creative-market.jpg?h=bfca663a296efd1d8aaa6a7f2870bc44"></a></div>
-                <div class="col-sm-6 col-md-3"><a href="#"><img class="img-fluid d-block mx-auto" src="img/clients/designmodo.jpg?h=116a831df4526f53dd7289e89a0476dd"></a></div>
-                <div class="col-sm-6 col-md-3"><a href="#"><img class="img-fluid d-block mx-auto" src="img/clients/envato.jpg?h=8a0748751b791c95127598b42fe9ab61"></a></div>
-                <div class="col-sm-6 col-md-3"><a href="#"><img class="img-fluid d-block mx-auto" src="img/clients/themeforest.jpg?h=7c2a20dbf3ae94f3f382e74dc9ef5f19"></a></div>
             </div>
         </div>
     </section>
@@ -294,7 +411,7 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-md-4"><span class="copyright">Copyright&nbsp;© Brand 2020</span></div>
+                <div class="col-md-4"><span class="copyright">Copyright&nbsp;© BirthdayBash 2020</span></div>
                 <div class="col-md-4">
                     <ul class="list-inline social-buttons">
                         <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -304,8 +421,8 @@
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline quicklinks">
-                        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
-                        <li class="list-inline-item"><a href="#">Terms of Use</a></li>
+                        <li class="list-inline-item "><a  href="#" style="color:#DC143C">Privacy Policy</a></li>
+                        <li class="list-inline-item "><a  href="#" style="color:#DC143C">Terms of Use</a></li>
                     </ul>
                 </div>
             </div>
