@@ -14,11 +14,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="fonts/fontawesome5-overrides.min.css?h=db5fbbc34070d36ea9b98958ab6f065c">
     <style rel="stylesheet">
-
-    /*
+        /*
     *  animation for dots
     */
-   .dot-floating {
+        /* .dot-floating {
   position: relative;
   width: 10px;
   height: 10px;
@@ -95,8 +94,8 @@
   100% {
     left: -100px;
   }
-}
-/*
+} */
+        /*
 *
 *  hovering on after 'be the part of our's is cliccked
 *
@@ -104,52 +103,65 @@
 
 
 
-.hvr-shutter-in-vertical {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  position: relative;
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-}
-.hvr-shutter-in-vertical:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border-radius: 50%;
-  background: #818a04;
-  -webkit-transform: scaleY(1);
-  transform: scaleY(1);
-  -webkit-transform-origin: 50%;
-  transform-origin: 50%;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-}
-.hvr-shutter-in-vertical:hover, .hvr-shutter-in-vertical:focus, .hvr-shutter-in-vertical:active {
-  color: white;
-}
-.hvr-shutter-in-vertical:hover:before, .hvr-shutter-in-vertical:focus:before, .hvr-shutter-in-vertical:active:before {
-  -webkit-transform: scaleY(0);
-  transform: scaleY(0);
-}
-</style>
+        .hvr-shutter-in-vertical {
+            display: inline-block;
+            vertical-align: middle;
+            -webkit-transform: perspective(1px) translateZ(0);
+            transform: perspective(1px) translateZ(0);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+            position: relative;
+            -webkit-transition-property: color;
+            transition-property: color;
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+        }
+
+        .hvr-shutter-in-vertical:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border-radius: 50%;
+            background: #c9ad12;
+            -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+            -webkit-transform-origin: 50%;
+            transform-origin: 50%;
+            -webkit-transition-property: transform;
+            transition-property: transform;
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+        }
+
+        .hvr-shutter-in-vertical:hover,
+        .hvr-shutter-in-vertical:focus,
+        .hvr-shutter-in-vertical:active {
+            color: rgb(255, 255, 255);
+        }
+
+        .hvr-shutter-in-vertical:hover:before,
+        .hvr-shutter-in-vertical:focus:before,
+        .hvr-shutter-in-vertical:active:before {
+            -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+        }
+
+        #team {
+            margin-top: -100px;
+        }
+    </style>
+
+
 </head>
 
 <body id="page-top">
     <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark" id="mainNav">
-        <div class="container"><a href="#Home" class="navbar-brand" ><span style="background: -webkit-linear-gradient(#ffdd00, #fbb034);
+        <div class="container"><a href="#Home" class="navbar-brand"><span style="background: -webkit-linear-gradient(#ffdd00, #fbb034);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
     font-size:3rem;
@@ -158,28 +170,50 @@
   -webkit-text-fill-color: transparent;
     font-size:2rem;
     " class="fas fa-paint-brush"></i></a>
-    <button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right" type="button" data-toogle="collapse" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+            <button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right"
+                type="button" data-toogle="collapse" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="nav navbar-nav ml-auto text-uppercase">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Services</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Team</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact us</a></li>
+                    <li style="padding-left: -12px;" class="nav-item"><a class="nav-link js-scroll-trigger"
+                            href="#Home">Home</a></li>
+                    <li style="padding-left: -12px;" class="nav-item"><a class="nav-link js-scroll-trigger"
+                            href="#about">Services</a></li>
+                    <li style="padding-left: -12px;" class="nav-item"><a class="nav-link js-scroll-trigger"
+                            href="#portfolio">Portfolio</a></li>
+                    <li style="padding-left: -12px;" class="nav-item"><a class="nav-link js-scroll-trigger"
+                            href="#team">Team</a></li>
+                    <li style="padding-left: -12px;" class="nav-item"><a class="nav-link js-scroll-trigger"
+                            href="#contact">Contact us</a></li>
+                    <li style="padding-left: -12px;" class="nav-item"><a class=" nav-link js-scroll-trigger" style=""
+                            href="#">Sign
+                            in/Sign up</a></li>
+                    <!--<li style="padding-left: -12px;" class="nav-item"><a class="nav-link js-scroll-trigger"
+                            href="#">Sign up</a></li>-->
                 </ul>
             </div><a class="js-scroll-trigger" href="#contact"></a>
         </div>
     </nav>
-  <header id="Home" class="masthead" style="background-image:url('img/banner.jpg?h=dd9ff3ad18cab3ee921efbcf79da8ca8'); max-width:100%; height:auto;">
-    <div class="container">
-        <div class="intro-text">
-            <div class="intro-lead-in"><span >Welcome To Editing world!</span></div>
-            <div class="intro-heading text-uppercase">
-                <div><br /><strong>Let&#39;s CELEBRATE BIRTHDAYS<br /><i class="fas fa-birthday-cake"></i></strong></div>
-            </div><a class="btn btn-warning btn-xl text-uppercase js-scroll-trigger" role="button"  href="#about">Tell me more</a>
+    <header id="Home" class="masthead"
+        style="background-image:url('img/banner.jpg?h=dd9ff3ad18cab3ee921efbcf79da8ca8'); max-width:100%; height:auto;">
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in"><span style="font-weight: 200; font-size:20px;
+                background: -webkit-linear-gradient(#F5F7FA,#B8C6DB);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;">Birthdays are always special and Who don't love to get Birthday Wishes??<br> N
+                        that's why we give some creative twist to your birthday wishes!</span></div>
+                <div class="intro-heading text-uppercase">
+                    <div><br /><strong style=" background: -webkit-linear-gradient(#D7E1EC,#FFFFFF
+                    );
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;">Let&#39;s CELEBRATE BIRTHDAYS<br /><i
+                                class="fas fa-birthday-cake"></i></strong></div>
+                </div><a class="btn btn-warning btn-xl text-uppercase js-scroll-trigger" role="button"
+                    href="#about">Let's Wish</a>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
 
 
 
@@ -188,200 +222,245 @@
 
 
 
-<section id="about">
-  <div class="container">
-      <div class="row">
-          <div class="col-lg-12 text-center">
-              <h2 class="text-uppercase">Why us??</h2>
-              <h3 class="text-muted section-subheading">Why you sould use our services.</h3>
-          </div>
-      </div>
-      <div class="row">
-          <div class="col-lg-12">
-              <ul class="list-group timeline">
-                  <li class="list-group-item">
-                      <div class="timeline-image"><img class="rounded-circle img-fluid" src="img/about/about_free_1.png"></div>
-                      <div class="timeline-panel">
-                          <div class="timeline-heading">
-                              <h4 class="display-5">Free Service</h4>
-                              <h4 class="subheading"></h4>
-                          </div>
-                          <div class="timeline-body">
-                              <p class="text-muted">We provide almost everything for free!!</p>
-                          </div>
-                      </div>
-                  </li>
-                  <li class="list-group-item timeline-inverted">
-                      <div class="timeline-image"><img class="rounded-circle img-fluid" src="img/about/about_free_2.png"></div>
-                      <div class="timeline-panel">
-                          <div class="timeline-heading">
-                              <h4 class="display-5">Make Beautiful Templates</h4>
-                              <h4 class="subheading"><h4>
-                          </div>
-                          <div class="timeline-body">
-                              <p class="text-muted">Create your own templates or use our templates to make a birthday wish!!</p>
-                          </div>
-                      </div>
-                  </li>
-                  <li  class="list-group-item timeline-inverted ">
-                    <div class="timeline-image hvr-shutter-in-vertical" style="background-color: #2098D1;">
-                        <h4>Be Part<br>&nbsp;Of Our<br>&nbsp;Story!</h4>
-                    </div>
-                </li>
-                  <li class="list-group-item">
-                      <div class="timeline-image"><img class="rounded-circle img-fluid" src="img/about/about_free_music.png"></div>
-                      <div class="timeline-panel">
-                          <div class="timeline-heading">
-                              <h4>Add the music</h4>
-                              <h4 class="subheading"></h4>
-                          </div>
-                          <div class="timeline-body">
-                              <p class="text-muted">Add the favourate music to your templates for free</p>
-                          </div>
-                      </div>
-                  </li>
-                  <li class="list-group-item timeline-inverted">
-                      <div class="timeline-image"><img class="rounded-circle img-fluid" src="img/about/about_share.png"></div>
-                      <div class="timeline-panel">
-                          <div class="timeline-heading">
-                              <h4>Add video and share your feeling with  world</h4>
-                              <h4 class="subheading"></h4>
-                          </div>
-                          <div class="timeline-body">
-                              <p class="text-muted">Add some video and then share it to the world.Lets make your art our face!!!</p>
-                          </div>
-                      </div>
-                  </li>
-                  <li class="list-group-item timeline-inverted">
-                      <div style="background-color: rgb(97, 88, 6);" class="timeline-image">
-                          <h4>And<br>much<br>more<br><span class="dot-floating"></span></h4>
-                      </div>
-                  </li>
-              </ul>
-          </div>
-      </div>
-  </div>
-</section>
-
-<section id="portfolio" class="bg-light">
+    <section id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="text-uppercase section-heading">Examples of templates</h2>
-                    <h3 class="section-subheading text-muted">Templates creted by our developers.</h3>
+                    <h2 class="text-uppercase">Why us??</h2>
+                    <h3 class="text-muted section-subheading">Why you should use our services?</h3>
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-6 col-md-4 portfolio-item"><a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+                <div class="col-lg-12">
+                    <ul class="list-group timeline">
+                        <li class="list-group-item">
+                            <div class="timeline-image"><img class="rounded-circle img-fluid"
+                                    src="img/about/about_free_1.png"></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 class="display-5">Free Service</h4>
+                                    <h4 class="subheading"></h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">We provide almost everything for Birthdays free without any
+                                        watermark!</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item timeline-inverted">
+                            <div class="timeline-image"><img class="rounded-circle img-fluid"
+                                    src="img/about/about_free_2.png"></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 class="display-5">Wish with Beautiful Templates</h4>
+                                    <h4 class="subheading">
+                                        <h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Create your own templates or use our templates!</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item timeline-inverted ">
+                            <div class="timeline-image hvr-shutter-in-vertical" style="background-color: #3d3c04;">
+                                <a href="#" style="text-decoration: none;">
+                                    <h4 style=" color: whitesmoke;">Be Part<br>&nbsp;Of Our<br>&nbsp;Story!</h4>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="timeline-image"><img class="rounded-circle img-fluid"
+                                    src="img/about/about_free_music.png"></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>Turn on some music</h4>
+                                    <h4 class="subheading"></h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Add your favourite music to your art!</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item timeline-inverted">
+                            <div class="timeline-image"><img class="rounded-circle img-fluid"
+                                    src="img/about/about_videos.png"></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>Include videos and stickers with edits </h4>
+                                    <h4 class="subheading"></h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Add videos, stickers and edit them the way you want!</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item ">
+                            <div class="timeline-image"><img class="rounded-circle img-fluid"
+                                    src="img/about/about_share.png"></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>Share Everywhere or Download Anywhere</h4>
+                                    <h4 class="subheading"></h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Download your templates or Wish your dears by sharing on
+                                        social media platforms </p>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- <li class="list-group-item timeline-inverted"> 
+                      <div style="background-color: rgb(97, 88, 6);" class="timeline-image">
+                          <h4>And<br>much<br>more<br><span class="dot-floating"></span></h4>
+                      </div>
+                  </li>  -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="text-uppercase section-heading">Take a look at some templates</h2>
+                    <h3 class="section-subheading text-muted">Templates created by our team</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-4 portfolio-item"><a class="portfolio-link" data-toggle="modal"
+                        href="#portfolioModal1">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
-                        </div><img class="img-fluid" src="img/portfolio/1-thumbnail.jpg?h=41aa7626f88f088a2c71d960df1da583">
+                        </div><img class="img-fluid"
+                            src="img/portfolio/1-thumbnail.jpg?h=41aa7626f88f088a2c71d960df1da583">
                     </a>
                     <div class="portfolio-caption">
                         <h4>Threads</h4>
                         <p class="text-muted">Illustration</p>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 portfolio-item"><a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+                <div class="col-sm-6 col-md-4 portfolio-item"><a class="portfolio-link" data-toggle="modal"
+                        href="#portfolioModal2">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
-                        </div><img class="img-fluid" src="img/portfolio/2-thumbnail.jpg?h=e0cd73f9cd729a71c99bb73d59fdff7a">
+                        </div><img class="img-fluid"
+                            src="img/portfolio/2-thumbnail.jpg?h=e0cd73f9cd729a71c99bb73d59fdff7a">
                     </a>
                     <div class="portfolio-caption">
                         <h4>Explore</h4>
                         <p class="text-muted">Graphic Design</p>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 portfolio-item"><a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+                <div class="col-sm-6 col-md-4 portfolio-item"><a class="portfolio-link" data-toggle="modal"
+                        href="#portfolioModal3">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
-                        </div><img class="img-fluid" src="img/portfolio/3-thumbnail.jpg?h=21014624943ca4e4f89cd0f1882d6e7f">
+                        </div><img class="img-fluid"
+                            src="img/portfolio/3-thumbnail.jpg?h=21014624943ca4e4f89cd0f1882d6e7f">
                     </a>
                     <div class="portfolio-caption">
                         <h4>Finish</h4>
                         <p class="text-muted">Identity</p>
                     </div>
                 </div>
-               <div class="col-sm-6 col-md-4 portfolio-item"><a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+                <div class="col-sm-6 col-md-4 portfolio-item"><a class="portfolio-link" data-toggle="modal"
+                        href="#portfolioModal4">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
-                        </div><img class="img-fluid" src="img/portfolio/4-thumbnail.jpg?h=62e85a384b97007129548e987c155861">
+                        </div><img class="img-fluid"
+                            src="img/portfolio/4-thumbnail.jpg?h=62e85a384b97007129548e987c155861">
                     </a>
                     <div class="portfolio-caption">
                         <h4>Lines</h4>
                         <p class="text-muted">Branding</p>
                     </div>
                 </div>
-                <!-- <div class="col-sm-6 col-md-4 portfolio-item"><a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
+                <div class="col-sm-6 col-md-4 portfolio-item"><a class="portfolio-link" data-toggle="modal"
+                        href="#portfolioModal5">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
-                        </div><img class="img-fluid img-fluid" src="img/portfolio/5-thumbnail.jpg?h=71496ae4d377a216a250e5349e5dab7c">
+                        </div><img class="img-fluid img-fluid"
+                            src="img/portfolio/5-thumbnail.jpg?h=71496ae4d377a216a250e5349e5dab7c">
                     </a>
                     <div class="portfolio-caption">
                         <h4>Southwest</h4>
                         <p class="text-muted">Website Design</p>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 portfolio-item"><a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
+                <div class="col-sm-6 col-md-4 portfolio-item"><a class="portfolio-link" data-toggle="modal"
+                        href="#portfolioModal6">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
-                        </div><img class="img-fluid" src="img/portfolio/6-thumbnail.jpg?h=f641bb32de99d994a495276cef6faf04">
+                        </div><img class="img-fluid"
+                            src="img/portfolio/6-thumbnail.jpg?h=f641bb32de99d994a495276cef6faf04">
                     </a>
                     <div class="portfolio-caption">
                         <h4>Window</h4>
                         <p class="text-muted">Photography</p>
                     </div>
-                </div>-->
+                </div>
             </div>
         </div>
     </section>
-    
+
     <section id="team" class="bg-light">
         <div class="container">
-          <h1 style="text-align: center;padding-bottom:12%;">Let's cheer for our team!!</h1>
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="team-member"><img class="rounded-circle mx-auto" src=".img/team/1.jpg?h=c434e0c7fcafcc377eb28d401bc929c5">
-                        <h4>Kay Garland</h4>
-                        <p class="text-muted">Lead Designer</p>
-                        <ul class="list-inline social-buttons">
-                            <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
+            <h1 style="text-align: center;padding-bottom:2%;">Let's cheer for our team!!</h1>
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="2550"
+                style="width:30%; height:auto; margin:0 auto;">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100 " src="img/team/1.jpg" alt="Second slide">
+                        <h5>Ishika Dabre</h5>
+                        <p>Front-End and Back-End</p>
                     </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="team-member"><img class="rounded-circle mx-auto" src="img/team/2.jpg?h=8e9342204d10ea6634de08592333f8d7">
-                        <h4>Larry Parker</h4>
-                        <p class="text-muted">Lead Marketer</p>
-                        <ul class="list-inline social-buttons">
-                            <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
+                    <div class="carousel-item">
+                        <img class="d-block w-100 " src="img/team/3.jpg" alt="Third slide">
+                        <h5>Sejal Dange</h5>
+                        <p>Front End and Back-End</p>
                     </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="team-member"><img class="rounded-circle mx-auto" src="img/team/3.jpg?h=ea6dfd472215c4f04980b45cace43204">
-                        <h4>Diana Pertersen</h4>
-                        <p class="text-muted">Lead Developer</p>
-                        <ul class="list-inline social-buttons">
-                            <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
+                    <div class="carousel-item">
+                        <img class="d-block w-100 " src="img/team/akanksha.jpeg" alt="Third slide">
+                        <h5>Akanksha Wankhade</h5>
+                        <p>Front End and Back-End</p>
                     </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="img/team/jay.jpeg" alt="First slide">
+                        <h5>Jay Bhakte</h5>
+                        <p>Team lead and Back-End</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="img/team/2.jpg" alt="First slide">
+                        <h5>Vedant Datey</h5>
+                        <p>Front-End,Back-End and Hosting</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="img/team/2.jpg" alt="First slide">
+                        <h5>Sanket More</h5>
+                        <p>Back-End and Hosting</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="img/team/yash.jpeg" alt="First slide">
+                        <h5>Yash Ingole</h5>
+                        <p>Back-End and Hosting</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="img/team/2.jpg" alt="First slide">
+                        <h5>Sanket Wakekar</h5>
+                        <p>Back-End and Hosting</p>
+                    </div>
+
                 </div>
             </div>
-        </div>
     </section>
     <section id="contact" style="background-image:url('img/map-image.png?h=dde716a63e31eca254a82a274d4f56c0');">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="text-uppercase section-heading">Contact Us</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="text-uppercase section-heading">Leave Comments</h2>
+                    <h3 class="section-subheading text-muted">Your valuable feedbacks/queries/suggestions are always
+                        welcome!!</h3>
                 </div>
             </div>
             <div class="row">
@@ -389,18 +468,25 @@
                     <form id="contactForm" name="contactForm" novalidate="novalidate">
                         <div class="form-row">
                             <div class="col col-md-6">
-                                <div class="form-group"><input class="form-control" type="text" id="name" placeholder="Your Name *" required=""><small class="form-text text-danger flex-grow-1 help-block lead"></small></div>
-                                <div class="form-group"><input class="form-control" type="email" id="email" placeholder="Your Email *" required=""><small class="form-text text-danger help-block lead"></small></div>
-                                <div class="form-group"><input class="form-control" type="tel" placeholder="Your Phone *" required=""><small class="form-text text-danger help-block lead"></small></div>
+                                <div class="form-group"><input class="form-control" type="text" id="name"
+                                        placeholder="Your Name *" required=""><small
+                                        class="form-text text-danger flex-grow-1 help-block lead"></small></div>
+                                <div class="form-group"><input class="form-control" type="email" id="email"
+                                        placeholder="Your Email *" required=""><small
+                                        class="form-text text-danger help-block lead"></small></div>
+
                             </div>
                             <div class="col-md-6">
-                                <div class="form-group"><textarea class="form-control" id="message" placeholder="Your Message *" required=""></textarea><small class="form-text text-danger help-block lead"></small></div>
+                                <div class="form-group"><textarea style="height: 155px;" class="form-control"
+                                        id="message" placeholder="Your Message *" required=""></textarea><small
+                                        class="form-text text-danger help-block lead"></small></div>
                             </div>
                             <div class="col">
                                 <div class="clearfix"></div>
                             </div>
                             <div class="col-lg-12 text-center">
-                                <div id="success"></div><button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Send Message</button>
+                                <div id="success"></div><button class="btn btn-primary btn-xl text-uppercase"
+                                    id="sendMessageButton" type="submit">Share with us</button>
                             </div>
                         </div>
                     </form>
@@ -413,16 +499,16 @@
             <div class="row">
                 <div class="col-md-4"><span class="copyright">Copyright&nbsp;© BirthdayBash 2020</span></div>
                 <div class="col-md-4">
-                    <ul class="list-inline social-buttons">
+                    <ul class="list-inline social-buttons"> Follow Us &nbsp;
                         <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
                         <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline quicklinks">
-                        <li class="list-inline-item "><a  href="#" style="color:#DC143C">Privacy Policy</a></li>
-                        <li class="list-inline-item "><a  href="#" style="color:#DC143C">Terms of Use</a></li>
+                        <li class="list-inline-item "><a href="#" style="color:#DC143C">Privacy Policy</a></li>
+                        <li class="list-inline-item "><a href="#" style="color:#DC143C">Terms of Use</a></li>
                     </ul>
                 </div>
             </div>
@@ -437,13 +523,19 @@
                             <div class="col-lg-8 mx-auto">
                                 <div class="modal-body">
                                     <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p><img class="img-fluid d-block mx-auto" src="img/portfolio/1-full.jpg?h=5dd7d2e943b04419fd49b39ac9311e2d">
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p><img
+                                        class="img-fluid d-block mx-auto"
+                                        src="img/portfolio/1-full.jpg?h=5dd7d2e943b04419fd49b39ac9311e2d">
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos
+                                        deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores
+                                        repudiandae, nostrum, reiciendis facere nemo!</p>
                                     <ul class="list-unstyled">
                                         <li>Date: January 2017</li>
                                         <li>Client: Threads</li>
                                         <li>Category: Illustration</li>
-                                    </ul><button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fa fa-times"></i><span>&nbsp;Close Project</span></button>
+                                    </ul><button class="btn btn-primary" data-dismiss="modal" type="button"><i
+                                            class="fa fa-times"></i><span>&nbsp;Close Project</span></button>
                                 </div>
                             </div>
                         </div>
@@ -461,13 +553,19 @@
                             <div class="col-lg-8 mx-auto">
                                 <div class="modal-body">
                                     <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p><img class="img-fluid d-block mx-auto" src="img/portfolio/2-full.jpg?h=8487e77cde92f4bcc127db1b8ed0c4c1">
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p><img
+                                        class="img-fluid d-block mx-auto"
+                                        src="img/portfolio/2-full.jpg?h=8487e77cde92f4bcc127db1b8ed0c4c1">
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos
+                                        deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores
+                                        repudiandae, nostrum, reiciendis facere nemo!</p>
                                     <ul class="list-unstyled">
                                         <li>Date: January 2017</li>
                                         <li>Client: Threads</li>
                                         <li>Category: Illustration</li>
-                                    </ul><button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fa fa-times"></i><span>&nbsp;Close Project</span></button>
+                                    </ul><button class="btn btn-primary" data-dismiss="modal" type="button"><i
+                                            class="fa fa-times"></i><span>&nbsp;Close Project</span></button>
                                 </div>
                             </div>
                         </div>
@@ -485,13 +583,19 @@
                             <div class="col-lg-8 mx-auto">
                                 <div class="modal-body">
                                     <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p><img class="img-fluid d-block mx-auto" src="img/portfolio/3-full.jpg?h=0eaf4d52e6cf4453f60193427500852f">
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p><img
+                                        class="img-fluid d-block mx-auto"
+                                        src="img/portfolio/3-full.jpg?h=0eaf4d52e6cf4453f60193427500852f">
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos
+                                        deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores
+                                        repudiandae, nostrum, reiciendis facere nemo!</p>
                                     <ul class="list-unstyled">
                                         <li>Date: January 2017</li>
                                         <li>Client: Threads</li>
                                         <li>Category: Illustration</li>
-                                    </ul><button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fa fa-times"></i><span>&nbsp;Close Project</span></button>
+                                    </ul><button class="btn btn-primary" data-dismiss="modal" type="button"><i
+                                            class="fa fa-times"></i><span>&nbsp;Close Project</span></button>
                                 </div>
                             </div>
                         </div>
@@ -509,13 +613,19 @@
                             <div class="col-lg-8 mx-auto">
                                 <div class="modal-body">
                                     <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p><img class="img-fluid d-block mx-auto" src="img/portfolio/4-full.jpg?h=721f69d0590c03962b69f832824a646b">
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p><img
+                                        class="img-fluid d-block mx-auto"
+                                        src="img/portfolio/4-full.jpg?h=721f69d0590c03962b69f832824a646b">
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos
+                                        deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores
+                                        repudiandae, nostrum, reiciendis facere nemo!</p>
                                     <ul class="list-unstyled">
                                         <li>Date: January 2017</li>
                                         <li>Client: Threads</li>
                                         <li>Category: Illustration</li>
-                                    </ul><button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fa fa-times"></i><span>&nbsp;Close Project</span></button>
+                                    </ul><button class="btn btn-primary" data-dismiss="modal" type="button"><i
+                                            class="fa fa-times"></i><span>&nbsp;Close Project</span></button>
                                 </div>
                             </div>
                         </div>
@@ -533,13 +643,19 @@
                             <div class="col-lg-8 mx-auto">
                                 <div class="modal-body">
                                     <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p><img class="img-fluid d-block mx-auto" src="img/portfolio/5-full.jpg?h=789d8002c11f19a550179c6c003234ad">
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p><img
+                                        class="img-fluid d-block mx-auto"
+                                        src="img/portfolio/5-full.jpg?h=789d8002c11f19a550179c6c003234ad">
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos
+                                        deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores
+                                        repudiandae, nostrum, reiciendis facere nemo!</p>
                                     <ul class="list-unstyled">
                                         <li>Date: January 2017</li>
                                         <li>Client: Threads</li>
                                         <li>Category: Illustration</li>
-                                    </ul><button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fa fa-times"></i><span>&nbsp;Close Project</span></button>
+                                    </ul><button class="btn btn-primary" data-dismiss="modal" type="button"><i
+                                            class="fa fa-times"></i><span>&nbsp;Close Project</span></button>
                                 </div>
                             </div>
                         </div>
@@ -557,13 +673,19 @@
                             <div class="col-lg-8 mx-auto">
                                 <div class="modal-body">
                                     <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p><img class="img-fluid d-block mx-auto" src="/img/portfolio/6-full.jpg?h=f423a081dafbc490942c47688d79210f">
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p><img
+                                        class="img-fluid d-block mx-auto"
+                                        src="/img/portfolio/6-full.jpg?h=f423a081dafbc490942c47688d79210f">
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos
+                                        deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores
+                                        repudiandae, nostrum, reiciendis facere nemo!</p>
                                     <ul class="list-unstyled">
                                         <li>Date: January 2017</li>
                                         <li>Client: Threads</li>
                                         <li>Category: Illustration</li>
-                                    </ul><button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fa fa-times"></i><span>&nbsp;Close Project</span></button>
+                                    </ul><button class="btn btn-primary" data-dismiss="modal" type="button"><i
+                                            class="fa fa-times"></i><span>&nbsp;Close Project</span></button>
                                 </div>
                             </div>
                         </div>
